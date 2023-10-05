@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/cdb2cd3b4e.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arbutus&family=Rubik+Glitch&family=Tourney:wght@100&display=swap" rel="stylesheet">
+    <title>Clocking</title>
+</head>
+
+<body>
+    <!--Header Part-->
+    <header id="header">
+
+    <h1 id="title">locking</h1>
+
+    <i id="clock-icon" class="fa-solid fa-clock"></i>
+
+    <div id="sun-icon" onclick="DarkWhiteMode()">
+    <i  class="fa-solid fa-sun" ></i>
+    </div>
+
+    <i id="settings" class="fa-solid fa-gear"></i>
+
+    <div id="settings-sidebar" class="settings-hidden">
+        <p id="Settings-Text">Settings</p>
+        <label id="switch">
+            <input type="checkbox" id="timeFormatSwitch">
+            <span id="slider" class="round"></span>
+        </label>
+                <div id="hour-system">
+            <p class="hour-system-12" onclick="display12HourTime()">12-hour</p>
+            <p class="hour-system-24" onclick="display24HourTime()">24-hour</p>
+        </div>
+        <i id="QuitSettings" class="fa-solid fa-xmark" onclick="QuitTheSidebar()"></i>
+        <div id="color-picker">
+            <p class="color-text">Colors:</p>
+            <i class="colors fa-regular fa-circle" id="red-color" onclick="SetRed()"></i>
+            <i class="colors fa-regular fa-circle" id="blue-color" onclick="SetBlue()"></i>
+            <i class="colors fa-regular fa-circle" id="green-color" onclick="SetGreen()"></i>
+            <i class="colors fa-regular fa-circle" id="default-color" onclick="SetDefault()"></i>
+        </div>
+        <div id="countries">
+            <p id="Country-Time">Countries:</p>
+        </div>
+    </div>
+        <button type="button" id="login">Login</button>
+        <div id="login-sidebar" class="hidden">
+            <input id="login-email" type="email" placeholder="Your Email adress" required>
+            <input id="login-password" type="password" placeholder="Your Password" required>
+            <button type="button" id="login-button">Login</button>
+            <p id="error-message"></p>
+        </div>
+    </header>
+
+    <!--Main Part-->
+    <main id="main-part">
+
+    <div id="Time">
+    </div>
+        
+    <div id="fullscreen">
+        <!-- Put your initial icon HTML or content here -->
+        <i onclick="openfullscr()" class="full fa-solid fa-expand"></i>
+    </div>
+
+    <button type="button" id="StopwatchButton">Stopwatch</button>
+    <div id="sidebar" class="hidden">
+        <p id="Timer">00:00:00</p>
+        <div id="PlayTimer" onclick="toggleTimer()">
+        <i class="fa-solid fa-circle-play"></i>
+        </div>
+        <i id="FlagStopWatch" class="fa-solid fa-flag" onclick="flagStopWatch()"></i>
+        <ul id="flagItem"></ul>
+        <i id="Reset" onclick="ResetTime()" class="fa-solid fa-arrow-rotate-right"></i>
+    </div>
+    </main>
+
+    <footer id="footer-part">
+        <div id="footer-bold-text">
+        <h1 id="footer-company">Our Company</h1>
+        <h1 id="footer-legal">Legal</h1>
+        <h1 id="footer-services">Services</h1>
+        </div>
+    </footer>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
