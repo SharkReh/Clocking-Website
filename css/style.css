@@ -380,3 +380,13 @@ input {
 #footer-company {
     padding: 20px;
 }
+.Forgot-Password {
+    position: absolute;
+    top: 67%;
+    left: 5%;
+    font-family: Helvetica;
+    font-size: 13px;
+    color: orange;
+    text-decoration: underline;
+    cursor: pointer;
+}
